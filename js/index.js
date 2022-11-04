@@ -33,7 +33,11 @@ $(window).on('load', function() {
                 n = $(this).index();
         
                 distance = $('.section').eq(n).offset().top;
-                $('html').animate({scrollTop: distance - 100},600);
+                if(n == 3) {
+                    $('html').animate({scrollTop: distance + -200},600);
+                } else {
+                    $('html').animate({scrollTop: distance - 100},600);
+                }
                 // console.log(distance)
             })
         
