@@ -9,9 +9,9 @@ body {width: 100%; background-color: var(--main-color); overflow-x: hidden; posi
 
 
 /* body scroll-bar */
-body::-webkit-scrollbar {width: 8px;}
-body::-webkit-scrollbar-thumb {height: 30%; background: none; border: 1px solid var(--sub-color); border-radius: 10px;}
-body::-webkit-scrollbar-track {background: var(--main-color); opacity: 0;}
+body::-webkit-scrollbar {width: 10px;}
+body::-webkit-scrollbar-thumb {height: 30%; background: var(--fourth-color);}
+body::-webkit-scrollbar-track {background: var(--sub-color); opacity: 0;}
 
 
 .contents {
@@ -22,14 +22,14 @@ background: linear-gradient(112deg, rgba(42, 54, 52, 1) 0%, rgba(184, 184, 184, 
 
 /* nav */
 
-nav {width: 100%; height: 60px; border-bottom: 0px ; display: flex; align-items: center; 
+nav {width: 100%; height: 55px; border-bottom: 0px ; display: flex; align-items: center; 
     background-color: none; 
     z-index: 100; position: absolute; top: 0; left: 0;}
 nav.move {transform: translateY(-150px);}
 nav.down {position: fixed; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); transform: translateY(0px); transition: transform .3s; background-color: var(--sub-color);}
 .nav-box {width: 50%; margin: 0 auto;}
 .nav-box > ul {width: 100%; display: flex; list-style: none;}
-.nav-box > ul > li p {width: fit-content; height: fit-content; margin: 0 auto; color: var(--main-color); text-align: center; font-size: 1.3rem; cursor: pointer; font-weight: bolder; border-radius: 5px;  padding: 2px 5px 2px 5px; transition: background-color .3s; transition: color .3s;}
+.nav-box > ul > li p {width: fit-content; height: fit-content; margin: 0 auto; color: var(--main-color); text-align: center; font-size: 1.2rem; cursor: pointer; font-weight: bolder; border-radius: 5px;  padding: 2px 5px 2px 5px; transition: background-color .3s; transition: color .3s;}
 .nav-box > ul > li p.move {color: var(--font-color);}
 .nav-box > ul > li p:hover {transition: color .3s; transition: background-color .3s; color: var(--font-color); background-color: var(--third-color); }
 
@@ -168,8 +168,8 @@ footer .footer-contents {border: 0px solid var(--sub-color);  border-radius: 10p
 .footer-box .footer-item-box {width: 100%; height: fit-content; display: flex;}
 .footer-box .footer-item {width: 40px; height: auto; margin-right: 20px;}
 .footer-box .footer-item a {height: 100%; width: 100%; display: block;}
-.footer-box .footer-item a svg {height: 100%; width: auto; display: block; color: var(--font-color);}
-.footer-box .footer-item a svg:hover {color: var(--third-color);}
+.footer-box .footer-item a svg {height: 100%; width: auto; display: block; color: var(--additional-color); transition: color .3s; }
+.footer-box .footer-item a svg:hover {color: var(--third-color); transition: color .3s; }
 
 /* Absolute Center Spinner */
 .loading {
