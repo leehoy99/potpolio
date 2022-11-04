@@ -1,6 +1,6 @@
 *{width: 100%; margin: 0; padding: 0; box-sizing: border-box;}
 /* :root { --main-color: #231f20; --sub-color: #f4f4f4 ; --third-color: #30c6fb;} */
-:root { --main-color: #CAD2C5; --sub-color: #84A98C ; --third-color: #52796F; --asd-color :#354F52; --font-color: #2F3E46;}
+:root { --main-color: #faf9f4; --sub-color: #cdd2cb ; --third-color: #b0bab1; --fourth-color :#2a3634; --font-color: #0a0b0d; --additional-color: #2b2b2b;}
 
 /* body */
 
@@ -13,30 +13,25 @@ body::-webkit-scrollbar {width: 8px;}
 body::-webkit-scrollbar-thumb {height: 30%; background: none; border: 1px solid var(--sub-color); border-radius: 10px;}
 body::-webkit-scrollbar-track {background: var(--main-color); opacity: 0;}
 
-/* .contents {
-  background: rgb(93,65,87);
-background: linear-gradient(250deg, rgba(93,65,87,1) 0%, rgba(168,202,186,1) 100%);
-background-color: var(--main-color);
-} */
 
 .contents {
-  background: rgb(202,210,197);
-  background: linear-gradient(307deg, rgba(202,210,197,1) 0%, rgba(132,169,140,1) 100%);
+background: rgba(42, 54, 52);
+background: linear-gradient(112deg, rgba(42, 54, 52, 1) 0%, rgba(184, 184, 184, 1) 100%);
 }
 
 
 /* nav */
 
-nav {width: 100%; height: 50px; border-bottom: 0px ; display: flex; align-items: center; 
+nav {width: 100%; height: 60px; border-bottom: 0px ; display: flex; align-items: center; 
     background-color: none; 
     z-index: 100; position: absolute; top: 0; left: 0;}
 nav.move {transform: translateY(-150px);}
 nav.down {position: fixed; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); transform: translateY(0px); transition: transform .3s; background-color: var(--sub-color);}
 .nav-box {width: 50%; margin: 0 auto;}
 .nav-box > ul {width: 100%; display: flex; list-style: none;}
-.nav-box > ul > li p {width: fit-content; margin: 0 auto; color: var(--font-color); text-align: center; font-size: 1.3rem; cursor: pointer; font-weight: bolder;}
+.nav-box > ul > li p {width: fit-content; height: fit-content; margin: 0 auto; color: var(--main-color); text-align: center; font-size: 1.3rem; cursor: pointer; font-weight: bolder; border-radius: 5px;  padding: 2px 5px 2px 5px; transition: background-color .3s; transition: color .3s;}
 .nav-box > ul > li p.move {color: var(--font-color);}
-.nav-box > ul > li p:hover {transform: scale(1.1); transition: transform .3s; color: var(--font-color);}
+.nav-box > ul > li p:hover {transition: color .3s; transition: background-color .3s; color: var(--font-color); background-color: var(--third-color); }
 
 /* main */
 
@@ -69,20 +64,20 @@ nav.down {position: fixed; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); transform
 
 .grid {width: 90%; height: 70rem; margin: 200px auto 200px auto; padding: 100px 100px 200px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr; gap: 5rem; align-items: center; opacity: 0;}
 .grid.moving{animation: grid-animation .7s forwards; }
-.grid .grid-contents {height: 100%; width: 100%; display: flex; flex-flow: column; border: 0px; border-radius: 10px; 
-    background-color : var(--sub-color); opacity: 0.9; 
+.grid .grid-contents {height: 600px; width: 100%; display: flex; flex-flow: column; border: 0px; border-radius: 10px; 
+    background-color : var(--main-color); opacity: 0.9; 
     padding: 60px; transition: transform .3s, background-color .3s; cursor: pointer;
     max-height: 1100px;
 }
 .grid .grid-contents .grid-img  {height: 50%;}
-.grid .grid-contents .grid-img img {height: 80%; object-fit: contain;}
+.grid .grid-contents .grid-img img {height: 80%; width: 100%; object-fit: cover; object-position: 0px 0px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px 5px;}
 .grid .grid-contents hr {width: 60%; margin: 0 auto;}
 .grid .grid-contents .grid-text {height: 50%; display: flex; flex-flow: column; justify-content: center; padding: 12px; color: var(--font-color); text-align: center;}
 .grid .grid-contents .grid-text h1 {font-size: 35px;}
 .grid .grid-contents .grid-text p {font-size: 18px;}
-.grid .grid-contents.grid-contents-hover {transform: translateY(-10px); transition: transform .3s, background-color .3s; background-color : rgba(0,0,0,0.3); }
-.grid .grid-contents .grid-text h1.grid-contents-hover {color: #fff;}
-.grid .grid-contents .grid-text p.grid-contents-hover {color: #fff;}
+.grid .grid-contents.grid-contents-hover {transform: translateY(-10px); transition: transform .3s, background-color .3s; background-color : var(--third-color); }
+.grid .grid-contents .grid-text h1.grid-contents-hover {color: var(--additional-color);}
+.grid .grid-contents .grid-text p.grid-contents-hover {color: var(--additional-color);}
 
 @keyframes grid-animation {
   0% {transform: translateY(-400px); opacity: 0;}
@@ -116,8 +111,9 @@ nav.down {position: fixed; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); transform
 
 
 .box-contents {width: 100%; height: fit-content; position: relative;}
-.box-contents h1 {font-size: 3rem;}
+.box-contents h1 {font-size: 3rem; color: var(--font-color);}
 .box-contents .space {display: block; height: 60px;}
+.box-contents .contents-description {color: var(--fourth-color);}
 
 
 .section:nth-child(2n) .box1 {width: 40%; padding: 80px 50px; display: flex; flex-flow: column nowrap; justify-content: space-between; }
@@ -129,7 +125,8 @@ nav.down {position: fixed; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); transform
 .section .box2 {transform: translateX(400px); opacity: 0;}
 .section .box1.moving {animation: box1-moving .7s ease-in-out forwards;}
 .section .box2.moving {animation: box2-moving .7s ease-in-out forwards;}
-.section4 {margin-bottom: 0;}
+.section4 {margin-bottom: 200px; width: 100%; height: 40rem; background-color: var(--third-color); overflow: hidden; box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px 5px;}
+.section4 .highlight {color: var(--font-color);}
 
 @keyframes box1-moving {
   0% {transform: translateX(-400px); opacity: 0;}
@@ -140,10 +137,10 @@ nav.down {position: fixed; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); transform
   100% {transform: translateX(0px); opacity: 1;}
 }
 
-.section:last-child .box.moving {animation: section4-animation .7s forwards; display: none;}
+.section4 .box.moving {animation: section4-animation .7s forwards;}
 
 @keyframes section4-animation {
-  0% {transform: translateX(1111100px);  opacity: 0;}
+  0% {transform: translateY(-500px);  opacity: 0;}
   100% {transform: translateY(0); opacity: 1;}
 }
 
@@ -153,9 +150,9 @@ nav.down {position: fixed; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); transform
 
 /* LINKBTN */
 
-.goto-btn {width: 100%; height: 75px; text-align: center; margin: 0 auto; border: 1px solid var(--third-color); display: flex; align-items: center; cursor: pointer; transition: all .3s;}
-.goto-btn a {text-decoration: none; color: inherit; color: var(--font-color);}
-.goto-btn:hover {background-color: var(--third-color); color: var(--main-color); transition: all .3s; border: 0;}
+.goto-btn {width: 100%; height: 75px; text-align: center; margin: 0 auto; display: flex; align-items: center; cursor: pointer; transition: all .3s; background-color: var(--third-color);}
+.goto-btn a {text-decoration: none; color: inherit;}
+.goto-btn:hover {background-color: var(--additional-color); color: var(--main-color); transition: all .3s; border: 0;}
 /* goto-btn-option */
 .goto-btn {border-radius: 10px;}
 

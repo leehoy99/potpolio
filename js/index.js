@@ -73,8 +73,7 @@ $(window).on('load', function() {
                     $('.section3').children('.box2').addClass('moving')
                 }
                 if (sct > sectionOffset('.section4')- 800) {
-                    $('.section4').children('.box1').addClass('moving')
-                    $('.section4').children('.box2').addClass('moving')
+                    $('.section4').children('.box').addClass('moving')
                 }
 
                 if(sct <= h-200) {
@@ -94,6 +93,7 @@ $(window).on('load', function() {
                     $('.nav-box > ul > li p').addClass('down');
                 } 
             })
+
         })
     }, 1200);
 });
