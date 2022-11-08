@@ -71,8 +71,8 @@ nav:hover .nav-box > ul > li p {color: var(--font-color);}
     padding: 60px; transition: transform .3s, background-color .3s; cursor: pointer;
     max-height: 1100px;
 }
-.grid .grid-contents .grid-img  {height: 50%; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px 5px; overflow: hidden;}
-.grid .grid-contents .grid-img img {height: 100%; width: 100%; object-fit: cover; object-position: 0px 0px;}
+.grid .grid-contents .grid-img  {height: 50%;}
+.grid .grid-contents .grid-img img {height: 100%; width: 100%; object-fit: cover; object-position: 0px 0px;  border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px 5px;}
 .grid .grid-contents .grid-text {height: 50%; display: flex; flex-flow: column; justify-content: center; padding: 12px; color: var(--additional-color); text-align: center;}
 .grid .grid-contents .grid-text h1 {font-size: 35px;}
 .grid .grid-contents .grid-text p {font-size: 18px;}
@@ -299,8 +299,7 @@ footer .footer-contents {border: 0px solid var(--sub-color);  border-radius: 10p
     .grid {padding: 0;}
     .grid .grid-contents {height: 500px; padding: 0;}
 
-    .grid .grid-contents .grid-img  {height: 300px; width: 100%; overflow: hidden;}
+    .grid .grid-contents .grid-img  {height: 300px; width: 100%; overflow: hidden; padding: 5%;}
     .grid .grid-contents .grid-img img {height: 100%; width: 100%; object-fit: cover;}
-    .grid .grid-contents hr {display: none;}
   }
 
