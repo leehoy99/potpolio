@@ -64,16 +64,15 @@ nav:hover .nav-box > ul > li p {color: var(--font-color);}
 
 /* grid */
 
-.grid {width: 90%; height: 70rem; margin: 200px auto 200px auto; padding: 100px 100px 200px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr; gap: 5rem; align-items: center; opacity: 0;}
+.grid {width: 90%; height: fit-content; margin: 200px auto 200px auto; padding: 100px 100px 200px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr; gap: 5rem; align-items: center; opacity: 0;}
 .grid.moving{animation: grid-animation .7s forwards; }
 .grid .grid-contents {height: 700px; width: 100%; display: flex; flex-flow: column; border: 0px; border-radius: 10px; 
     background-color : var(--sub-color); opacity: 0.9; 
     padding: 60px; transition: transform .3s, background-color .3s; cursor: pointer;
     max-height: 1100px;
 }
-.grid .grid-contents .grid-img  {height: 50%;}
-.grid .grid-contents .grid-img img {height: 80%; width: 100%; object-fit: cover; object-position: 0px 0px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px 5px;}
-.grid .grid-contents hr {width: 60%; margin: 0 auto;}
+.grid .grid-contents .grid-img  {height: 50%; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px 5px; overflow: hidden;}
+.grid .grid-contents .grid-img img {height: 100%; width: 100%; object-fit: cover; object-position: 0px 0px;}
 .grid .grid-contents .grid-text {height: 50%; display: flex; flex-flow: column; justify-content: center; padding: 12px; color: var(--additional-color); text-align: center;}
 .grid .grid-contents .grid-text h1 {font-size: 35px;}
 .grid .grid-contents .grid-text p {font-size: 18px;}
@@ -297,6 +296,11 @@ footer .footer-contents {border: 0px solid var(--sub-color);  border-radius: 10p
   }
 
   @media screen and (max-width : 1380px) {
-    
+    .grid {padding: 0;}
+    .grid .grid-contents {height: 500px; padding: 0;}
+
+    .grid .grid-contents .grid-img  {height: 300px; width: 100%; overflow: hidden;}
+    .grid .grid-contents .grid-img img {height: 100%; width: 100%; object-fit: cover;}
+    .grid .grid-contents hr {display: none;}
   }
 
